@@ -3,14 +3,14 @@ on: push
 permissions:
     issues: write
 jobs:
-    # simulatebuildjob:
-    #     name: simulatedbuildjob
-    #     runs-on: ubuntu-latest
-    #     steps:
-    #         - name: simulatedbuildstep
-    #           shell: bash
-    #           run: |
-    #             echo "GH_REPO: $GH_REPO"
+    simulatebuildjob:
+        name: simulatedbuildjob
+        runs-on: ubuntu-latest
+        steps:
+            - name: simulatedbuildstep
+              shell: bash
+              run: |
+                echo "GH_REPO: $GH_REPO"
     simulateddeployjob:
         name: simulateddeployjob
         runs-on: ubuntu-latest
