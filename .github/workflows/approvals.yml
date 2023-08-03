@@ -13,13 +13,17 @@ jobs:
     simulateddeploy:
         runs-on: ununtu-latest
         steps:
-            - uses: trstringer/manual-approval@v1
-              with:
-                secret: ${{ github.TOKEN }}
-                approvers: AndyHiron
-                minimum-approvals: 1
-                issue-title: "Simulated deployment "
-                issue-body: "Please approve or deny the deployment"
-                exclude-workflow-initiator-as-approver: false
-                additional-approved-words: 'some additional approved words'
-                additional-denied-words: 'some denied words'
+            - name: dummydeploy
+              shell: bash
+              run: |
+                echo "Dummy deploy"
+            # - uses: trstringer/manual-approval@v1
+            #   with:
+            #     secret: ${{ github.TOKEN }}
+            #     approvers: AndyHiron
+            #     minimum-approvals: 1
+            #     issue-title: "Simulated deployment "
+            #     issue-body: "Please approve or deny the deployment"
+            #     exclude-workflow-initiator-as-approver: false
+            #     additional-approved-words: 'some additional approved words'
+            #     additional-denied-words: 'some denied words'
