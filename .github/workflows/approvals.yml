@@ -4,13 +4,15 @@ permissions:
     issues: write
 jobs:
     simulatebuildjob:
+        name: simulatedbuildjob
         runs-on: ubuntu-latest
         steps:
             - name: simulatedbuildstep
               shell: bash
               run: |
                 echo "GH_REPO: $GH_REPO"
-    simulateddeploy:
+    simulateddeployjob:
+        name: simulateddeployjob
         runs-on: ununtu-latest
         steps:
             - name: dummydeploy
