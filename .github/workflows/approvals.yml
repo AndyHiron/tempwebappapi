@@ -1,0 +1,11 @@
+name: approvals
+on: push
+
+jobs:
+    any_name:
+        runs-on: ubuntu-latest
+        steps:
+            - name: simulatedbuild
+              shell: bash
+              run: |
+                echo "GH_REPO: $GH_REPO"
