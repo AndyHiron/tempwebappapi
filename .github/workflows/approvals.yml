@@ -3,29 +3,25 @@ on: push
 permissions:
     issues: write
 jobs:
-    simulatebuildjob:
-        name: simulatedbuildjob
-        runs-on: ubuntu-latest
-        steps:
-            - name: simulatedbuildstep
-              shell: bash
-              run: |
-                echo "GH_REPO: $GH_REPO"
+    # simulatebuildjob:
+    #     name: simulatedbuildjob
+    #     runs-on: ubuntu-latest
+    #     steps:
+    #         - name: simulatedbuildstep
+    #           shell: bash
+    #           run: |
+    #             echo "GH_REPO: $GH_REPO"
     simulateddeployjob:
         name: simulateddeployjob
         runs-on: ununtu-latest
         steps:
-            - name: dummydeploy
-              shell: bash
-              run: |
-                echo "Dummy deploy"
-            # - uses: trstringer/manual-approval@v1
-            #   with:
-            #     secret: ${{ github.TOKEN }}
-            #     approvers: AndyHiron
-            #     minimum-approvals: 1
-            #     issue-title: "Simulated deployment "
-            #     issue-body: "Please approve or deny the deployment"
-            #     exclude-workflow-initiator-as-approver: false
-            #     additional-approved-words: 'some additional approved words'
-            #     additional-denied-words: 'some denied words'
+            - uses: trstringer/manual-approval@v1
+              with:
+                secret: ${{ github.TOKEN }}
+                approvers: AndyHiron
+                minimum-approvals: 1
+                issue-title: "Simulated deployment "
+                issue-body: "Please approve or deny the deployment"
+                exclude-workflow-initiator-as-approver: false
+                additional-approved-words: 'some additional approved words'
+                additional-denied-words: 'some denied words'
