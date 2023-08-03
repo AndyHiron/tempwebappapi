@@ -13,7 +13,7 @@ jobs:
     #             echo "GH_REPO: $GH_REPO"
     simulateddeployjob:
         name: simulateddeployjob
-        runs-on: ununtu-latest
+        runs-on: ubuntu-latest
         steps:
             - uses: trstringer/manual-approval@v1
               with:
