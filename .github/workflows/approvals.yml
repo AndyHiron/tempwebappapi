@@ -20,7 +20,7 @@ jobs:
                 secret: ${{ github.TOKEN }}
                 approvers: AndyHiron
                 minimum-approvals: 1
-                issue-title: "Simulated deployment "
+                issue-title: "Simulated deployment"
                 issue-body: "Please approve or deny the deployment"
                 exclude-workflow-initiator-as-approver: false
                 additional-approved-words: 'some additional approved words'
