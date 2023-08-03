@@ -1,6 +1,7 @@
 name: approvals
 on: push
-
+permissions:
+    issues: write
 jobs:
     simulatebuildjob:
         runs-on: ubuntu-latest
